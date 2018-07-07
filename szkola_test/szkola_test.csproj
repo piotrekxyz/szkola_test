@@ -61,6 +61,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Klasy\Instrument.cs" />
+    <Compile Include="Klasy\Nauczyciel.cs" />
+    <Compile Include="Klasy\Operacje.cs" />
+    <Compile Include="Klasy\Osoba.cs" />
+    <Compile Include="Klasy\Przedmiot.cs" />
+    <Compile Include="Klasy\Uczen.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

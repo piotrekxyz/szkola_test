@@ -6,8 +6,25 @@
         xmlns:local="clr-namespace:szkola_test"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-		<Button Content="Button" HorizontalAlignment="Left" Margin="95,65,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+	<Grid>
+		<Label x:Name="imie_lb" Content="Imię:" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="imie_tb" HorizontalAlignment="Left" Height="23" Margin="40,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+		<Label x:Name="nazwisko_lb" Content="Nazwisko:" HorizontalAlignment="Left" Margin="193,40,0,0" VerticalAlignment="Top"/>
+		<TextBox x:Name="nazwisko_tb" HorizontalAlignment="Left" Height="23" Margin="193,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+		<ComboBox x:Name="instrument_cb" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Width="120"/>
+		<Label x:Name="instrument_lb" Content="Instrument:" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top"/>
+		<Label x:Name="cykl_lb" Content="Cykl:" HorizontalAlignment="Left" Margin="193,113,0,0" VerticalAlignment="Top"/>
+		<StackPanel HorizontalAlignment="Left" Height="36" Margin="193,144,0,0" VerticalAlignment="Top" Width="82">
+			<RadioButton x:Name="czteroletni_cykl_rb" Content="czteroletni" IsThreeState="False" Click="Czteroletni_cykl_rb_click"/>
+			<RadioButton x:Name="szescioletni_cykl_rb" Content="sześcioletni" IsThreeState="False" Click="Szescioletni_cykl_rb_click"/>
+		</StackPanel>
+		<Label x:Name="klasa_lb" Content="Klasa:" HorizontalAlignment="Left" Margin="313,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.037,-0.334"/>
+		<ComboBox x:Name="klasa_cb" HorizontalAlignment="Left" Margin="313,144,0,0" VerticalAlignment="Top" Width="40"/>
+		<Label x:Name="nauczyciel_lb" Content="Nauczyciel:" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top"/>
+		<ComboBox x:Name="nauczyciel_cb" HorizontalAlignment="Left" Margin="40,241,0,0" VerticalAlignment="Top" Width="120"/>
+		<Button x:Name="dodaj_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="368,72,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_bt_Click"/>
+		<TextBox x:Name="pesel_tb" HorizontalAlignment="Left" Height="23" Margin="193,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+		<Label x:Name="pesel_lb" Content="Pesel:" HorizontalAlignment="Left" Margin="213,200,0,0" VerticalAlignment="Top"/>
 
 	</Grid>
 </Window>
