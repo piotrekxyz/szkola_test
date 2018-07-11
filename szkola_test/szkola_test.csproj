@@ -65,6 +65,7 @@
     <Compile Include="Klasy\Nauczyciel.cs" />
     <Compile Include="Klasy\Operacje.cs" />
     <Compile Include="Klasy\Osoba.cs" />
+    <Compile Include="Klasy\Pracownik.cs" />
     <Compile Include="Klasy\Przedmiot.cs" />
     <Compile Include="Klasy\Uczen.cs" />
     <Compile Include="MainWindow.xaml.cs">

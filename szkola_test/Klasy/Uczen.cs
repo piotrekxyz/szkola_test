@@ -2,17 +2,21 @@
 {
 	class Uczen : Osoba
 	{
-		public int Cykl { get; set; }   // zastanowić się czy nie lepiej cyfrą
+		#region wlasciwosi
+		public int Cykl { get; set; }
 		public int? Klasa { get; set; }
 		public Nauczyciel Nauczyciel { get; set; }
-		bool Absolwent { get; set; } = false;
+		public bool Absolwent { get; set; } = false;
+		public Instrument Instrument { get; set; }
+		#endregion
 
-		public Uczen(string imie, string nazwisko, int cykl, int klasa, Instrument instrument, Nauczyciel nauczyciel, string pesel) : base(imie, nazwisko, instrument, pesel)
+		public Uczen(string imie, string nazwisko, int cykl, int klasa, Instrument instrument, Nauczyciel nauczyciel, string pesel) : base(imie, nazwisko, pesel)
 		{
 			this.Cykl = cykl;
 			this.Klasa = klasa;
 			this.Nauczyciel = nauczyciel;
 			this.Pesel = pesel;
+			this.Instrument = instrument;
 		}
 
 		void PodniesKlase()     // jakoś we właściwości?
