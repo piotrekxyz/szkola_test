@@ -225,7 +225,7 @@ namespace szkola_test.Klasy
 			if (elementyDoWstawienia.Length < nazwyKolumn.Length)
 				return null;
 			if (nazwyKolumn.Length == 1)
-				return string.Format("insert into {0} ({1}) values ('{1}')", nazwaTabeli, nazwyKolumn[0]);
+				return string.Format("insert into {0} ({1}) values ('{1}')", nazwaTabeli, elementyDoWstawienia[0]);
 
 			var s0 = string.Format("insert into {0} ", nazwaTabeli);
 			var s1 = "(";
@@ -233,7 +233,6 @@ namespace szkola_test.Klasy
 			var s3 = ")";
 
 			int licznik = 0;
-			var s = string.Format("({0}) values ('{0}')", nazwyKolumn[0]);
 			foreach (var item in nazwyKolumn)
 			{
 				s1 += nazwyKolumn[licznik];
