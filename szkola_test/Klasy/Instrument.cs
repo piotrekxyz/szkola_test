@@ -1,9 +1,9 @@
 ﻿namespace szkola_test.Klasy
 {
-	class Instrument : Przedmiot
+	class Instrument : Subject
 	{
-		public string Sekcja { get; set; }
+		public string Section { get; set; }
 
-		public Instrument(string nazwa, string sekcja) : base(nazwa) => this.Sekcja = sekcja;
+		public Instrument(string name, string section) : base(name) => Section = section;
 	}
 }

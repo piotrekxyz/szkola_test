@@ -5,26 +5,81 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:szkola_test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Music School Administration" Height="350" Width="627.83">
 	<Grid>
-		<Label x:Name="imie_lb" Content="Imię:" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top"/>
-		<TextBox x:Name="imie_tb" HorizontalAlignment="Left" Height="23" Margin="40,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-		<Label x:Name="nazwisko_lb" Content="Nazwisko:" HorizontalAlignment="Left" Margin="193,40,0,0" VerticalAlignment="Top"/>
-		<TextBox x:Name="nazwisko_tb" HorizontalAlignment="Left" Height="23" Margin="193,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-		<ComboBox x:Name="instrument_cb" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Width="120"/>
-		<Label x:Name="instrument_lb" Content="Instrument:" HorizontalAlignment="Left" Margin="40,113,0,0" VerticalAlignment="Top"/>
-		<Label x:Name="cykl_lb" Content="Cykl:" HorizontalAlignment="Left" Margin="193,113,0,0" VerticalAlignment="Top"/>
-		<StackPanel HorizontalAlignment="Left" Height="36" Margin="193,144,0,0" VerticalAlignment="Top" Width="82">
-			<RadioButton x:Name="czteroletni_cykl_rb" Content="czteroletni" IsThreeState="False" Click="Czteroletni_cykl_rb_click"/>
-			<RadioButton x:Name="szescioletni_cykl_rb" Content="sześcioletni" IsThreeState="False" Click="Szescioletni_cykl_rb_click"/>
-		</StackPanel>
-		<Label x:Name="klasa_lb" Content="Klasa:" HorizontalAlignment="Left" Margin="313,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.037,-0.334"/>
-		<ComboBox x:Name="klasa_cb" HorizontalAlignment="Left" Margin="313,144,0,0" VerticalAlignment="Top" Width="40"/>
-		<Label x:Name="nauczyciel_lb" Content="Nauczyciel:" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top"/>
-		<ComboBox x:Name="nauczyciel_cb" HorizontalAlignment="Left" Margin="40,241,0,0" VerticalAlignment="Top" Width="120"/>
-		<Button x:Name="dodaj_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="368,72,0,0" VerticalAlignment="Top" Width="75" Click="Dodaj_bt_Click"/>
-		<TextBox x:Name="pesel_tb" HorizontalAlignment="Left" Height="23" Margin="193,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
-		<Label x:Name="pesel_lb" Content="Pesel:" HorizontalAlignment="Left" Margin="213,200,0,0" VerticalAlignment="Top"/>
+		<TabControl HorizontalAlignment="Left" Height="297" Margin="6,12,0,0" VerticalAlignment="Top" Width="591">
+			<TabItem Header="Uczniowie">
+				<Grid Background="#FFE5E5E5">
+					<Label x:Name="name_st_lb" Content="Imię:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.133,-0.922"/>
+					<TextBox x:Name="name_student_tb" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<Label x:Name="instrument_st_lb" Content="Instrument:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"/>
+					<ComboBox x:Name="instrument_student_cb" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="120"/>
+					<Label x:Name="surname_st_lb" Content="Nazwisko:" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top"/>
+					<TextBox x:Name="surname_student_tb" HorizontalAlignment="Left" Height="23" Margin="151,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<Button x:Name="add_student_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="331,36,0,0" VerticalAlignment="Top" Width="75" Click="Add_student_bt_Click"/>
+					<StackPanel x:Name="cycle_sp" HorizontalAlignment="Left" Height="36" Margin="151,107,0,0" VerticalAlignment="Top" Width="82">
+						<RadioButton x:Name="fourYearCycle_rb" Content="czteroletni" IsThreeState="False" Click="FourYearCycle_rb_click"/>
+						<RadioButton x:Name="sixYearCycle_rb" Content="sześcioletni" IsThreeState="False" Click="SixYearCycle_rb_click"/>
+					</StackPanel>
+					<Label x:Name="cycle_lb" Content="Cykl:" HorizontalAlignment="Left" Margin="151,76,0,0" VerticalAlignment="Top"/>
+					<ComboBox x:Name="class_cb" HorizontalAlignment="Left" Margin="272,107,0,0" VerticalAlignment="Top" Width="40"/>
+					<Label x:Name="class_lb" Content="Klasa:" HorizontalAlignment="Left" Margin="272,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.037,-0.334"/>
+					<ComboBox x:Name="teacher_cb" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="120"/>
+					<Label x:Name="teacher_lb" Content="Nauczyciel:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top"/>
+					<TextBox x:Name="pesel_student_tb" HorizontalAlignment="Left" Height="23" Margin="151,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+					<Label x:Name="pesel_st_lb" Content="Pesel:" HorizontalAlignment="Left" Margin="151,158,0,0" VerticalAlignment="Top"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Nauczyciele">
+				<Grid Background="#FFE5E5E5">
+					<Label x:Name="name_teacher_lb" Content="Imię:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.133,-0.922"/>
+					<Label x:Name="surname_teacher_lb" Content="Nazwisko:" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="instrument_teacher_lb" Content="Instrument:" HorizontalAlignment="Left" Margin="10,76,0,0" VerticalAlignment="Top"/>
+					<ComboBox x:Name="instrument_teacher_cb" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="120"/>
+					<TextBox x:Name="name_teacher_tb" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<TextBox x:Name="surname_teacher_tb" HorizontalAlignment="Left" Height="23" Margin="151,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<Button x:Name="add_teacher_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="75" Click="Add_teacher_bt_Click"/>
+					<TextBox x:Name="pesel_teacher_tb" HorizontalAlignment="Left" Height="23" Margin="151,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+					<Label x:Name="pesel_teacher_lb" Content="Pesel:" HorizontalAlignment="Left" Margin="151,76,0,0" VerticalAlignment="Top"/>
+					<Label x:Name="subjects_te_lb" Content="Przedmioty:" HorizontalAlignment="Left" Margin="337,0,0,0" VerticalAlignment="Top"/>
+					<StackPanel x:Name="subject_sp" HorizontalAlignment="Left" Height="243" Margin="337,26,0,0" VerticalAlignment="Top" Width="133">
+					</StackPanel>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Instrumenty">
+				<Grid Background="#FFE5E5E5">
+					<ListBox x:Name="listOfInstruments_listBox" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="ChangedClickInstrument"/>
+					<Label x:Name="name_in_lb" Content="Nazwa:" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.133,-0.922"/>
+					<TextBox x:Name="instrument_name_tb" HorizontalAlignment="Left" Height="23" Margin="123,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<Button x:Name="add_instrument_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="318,41,0,0" VerticalAlignment="Top" Width="75" Click="Add_instrument_bt_Click"/>
+
+				</Grid>
+			</TabItem>
+			<TabItem Header="Przedmioty">
+				<Grid Background="#FFE5E5E5">
+					<ListBox x:Name="listOfSubjects_listBox" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="158" SelectionChanged="ChangedClickSubjects"/>
+					<Button x:Name="add_subject_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="417,41,0,0" VerticalAlignment="Top" Width="75" Click="Add_subject_bt_Click"/>
+					<Label x:Name="name_subject_lb" Content="Nazwa:" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.133,-0.922"/>
+					<TextBox x:Name="subject_name_tb" HorizontalAlignment="Left" Height="23" Margin="211,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<TextBox x:Name="subject_description_tb" HorizontalAlignment="Left" Height="134" Margin="211,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="336"/>
+					<Label x:Name="subject_description_lb" Content="Opis:" HorizontalAlignment="Left" Margin="211,80,0,0" VerticalAlignment="Top"/>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Pracownicy">
+				<Grid Background="#FFE5E5E5">
+					<ListBox x:Name="listOfEmployees_listBox" HorizontalAlignment="Left" Height="249" Margin="10,10,0,0" VerticalAlignment="Top" Width="158" SelectionChanged="ChangedClickEmployees"/>
+					<Button x:Name="add_employee_bt" Content="Dodaj" HorizontalAlignment="Left" Margin="500,39,0,0" VerticalAlignment="Top" Width="75" Click="Add_employee_bt_Click"/>
+					<Label x:Name="employee_name_lb" Content="Imię:" HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.133,-0.922"/>
+					<TextBox x:Name="employee_name_tb" HorizontalAlignment="Left" Height="23" Margin="218,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<Label x:Name="employee_surname_lb" Content="Nazwisko:" HorizontalAlignment="Left" Margin="362,10,0,0" VerticalAlignment="Top"/>
+					<TextBox x:Name="employee_surname_tb" HorizontalAlignment="Left" Height="23" Margin="362,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+					<TextBox x:Name="employee_pesel_tb" HorizontalAlignment="Left" Height="23" Margin="362,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+					<Label x:Name="employee_pesel_lb" Content="Pesel:" HorizontalAlignment="Left" Margin="362,166,0,0" VerticalAlignment="Top"/>
+					<TextBox x:Name="employee_position_tb" HorizontalAlignment="Left" Height="23" Margin="218,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+					<Label x:Name="employee_position_lb" Content="Stanowisko:" HorizontalAlignment="Left" Margin="218,166,0,0" VerticalAlignment="Top"/>
+				</Grid>
+			</TabItem>
+		</TabControl>
 
 	</Grid>
 </Window>

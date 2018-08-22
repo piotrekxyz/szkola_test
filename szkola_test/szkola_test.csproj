@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>if_Metronome_310719.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -61,13 +64,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Klasy\Extensions.cs" />
     <Compile Include="Klasy\Instrument.cs" />
-    <Compile Include="Klasy\Nauczyciel.cs" />
-    <Compile Include="Klasy\Operacje.cs" />
-    <Compile Include="Klasy\Osoba.cs" />
-    <Compile Include="Klasy\Pracownik.cs" />
-    <Compile Include="Klasy\Przedmiot.cs" />
-    <Compile Include="Klasy\Uczen.cs" />
+    <Compile Include="Klasy\Teacher.cs" />
+    <Compile Include="Klasy\Operations.cs" />
+    <Compile Include="Klasy\Person.cs" />
+    <Compile Include="Klasy\Employee.cs" />
+    <Compile Include="Klasy\Subject.cs" />
+    <Compile Include="Klasy\Student.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,7 +104,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SQL-e\szkola_test.sql" />
+    <Resource Include="Files\if_Metronome_310719.ico" />
+    <Resource Include="if_Metronome_310719.ico" />
+    <Content Include="SQL-s\szkola_test.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
